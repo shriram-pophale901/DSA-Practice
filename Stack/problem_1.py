@@ -15,75 +15,41 @@ input string is valid.
 '''
 
 
-# s = input()
-
-# stack = []
-
-# for ch in s:
-
-#     # opening brackets
-#     if ch in "([{":
-#         stack.append(ch)
-
-#     else:
-
-#         # stack empty
-#         if not stack:
-#             print("false")
-#             break
-
-#         top = stack.pop()
-
-#         # matching check
-#         if (ch == ")" and top != "(") or \
-#            (ch == "]" and top != "[") or \
-#            (ch == "}" and top != "{"):
-
-#             print("false")
-#             break
-
-# else:
-    
-#     if not stack:
-#         print("true")
-#     else:
-#         print("false")
-
-
-
-
-
-
-
-
-
-
-
+s = input()
 
 stack = []
 
-# PUSH
-stack.append(10)
-stack.append(20)
-stack.append(30)
+for ch in s:
 
-print("After push:", stack)
+    # opening brackets
+    if ch in "([{":
+        stack.append(ch)
 
+    else:
 
-# PEEK (top element)
-print("Top element:", stack[-1])
+        # stack empty
+        if not stack:
+            print("false")
+            break
 
+        top = stack.pop()
 
-# POP
-removed = stack.pop()
+        # matching check
+        if (ch == ")" and top != "(") or \
+           (ch == "]" and top != "[") or \
+           (ch == "}" and top != "{"):
 
-print("Removed element:", removed)
+            print("false")
+            break
 
-print("After pop:", stack)
-
-
-# isEmpty
-if not stack:
-    print("Stack is empty")
 else:
-    print("Stack is not empty")
+    
+    if not stack:
+        print("true")
+    else:
+        print("false")
+
+
+
+
+
